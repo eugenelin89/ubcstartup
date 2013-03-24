@@ -40,7 +40,7 @@
 ,\"desc1\":\"Have an Irish drink with your lady. Guinness, Kilkenny, \"\
 ,\"desc2\":\"or an Irish Car Bomb.\"\
 ,\"desc3\":\"\"\
-,\"headerImg\":\"http://starevents.com/wp-content/uploads/2012/12/hat.png\"\
+,\"headerImg\":\"http://24.media.tumblr.com/tumblr_m10cm7o9fx1rpv9aho1_400.jpg\"\
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-02-28T00:00:00.000Z\"\

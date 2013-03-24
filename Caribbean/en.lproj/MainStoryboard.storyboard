@@ -86,9 +86,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pnh-Tb-mtu">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6XW-oY-Mhw">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="6XW-oY-Mhw">
                             <connections>
                                 <action selector="menuButtonClicked:" destination="2" id="OX2-gS-ejT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Setup" id="4pK-C9-Iwt">
+                            <connections>
+                                <segue destination="srY-9g-fcV" kind="push" id="eIZ-Zz-XAz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,6 +105,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NIS-6N-OjC">
+            <objects>
+                <viewController id="srY-9g-fcV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0W9-kz-HiI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ith-vC-j7E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gev-EL-Thh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="-647"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="7ay-BI-7cP">
@@ -151,7 +171,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" text="Total Prizes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S94-5J-w4p">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" text="Points:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S94-5J-w4p">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="105" id="ceK-h0-gu0"/>
                                         </constraints>
@@ -166,7 +186,10 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" tag="1" contentMode="left" text="Current Players:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ7-78-Z5z">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" tag="1" contentMode="left" text="Teams:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ7-78-Z5z">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="133" id="cWg-r0-QDo"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -418,8 +441,8 @@
                 <relationship kind="outlet" name="inProgressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="totalPrizesLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MapViewCell" superclassName="UITableViewCell">

@@ -20,6 +20,10 @@
     
     NSLog(@"FBState: %@", FBSession.activeSession);
     
+    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:self.window.rootViewController leftViewController:nil rightViewController:nil];
+    
+    self.window.rootViewController = deckController;
+    
     return YES;
 }
 							
