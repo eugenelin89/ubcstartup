@@ -9,6 +9,7 @@
 #import "ConfirmDateViewController.h"
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SetupViewController.h"
 
 
 @interface ConfirmDateViewController ()
@@ -51,6 +52,14 @@
 - (IBAction)confirmButtonClicked:(id)sender
 {
     
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    UIViewController *setupViewController = appDelegate.setupViewController;
+    if(setupViewController)
+    {
+        [self.navigationController popToViewController:setupViewController animated:YES];
+    }else{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 @end

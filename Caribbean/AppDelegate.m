@@ -11,7 +11,7 @@
 
 @implementation AppDelegate
 @synthesize dataCache = _dataCache;
-
+@synthesize setupViewController = _setupViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

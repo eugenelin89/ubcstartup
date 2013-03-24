@@ -37,6 +37,10 @@
     // Pre-fetch FB Friends from FB.
     // We know that we gonna need it in the next step.  So improve the experience by fetching it now.
     [MainController getMyFbFriends:self];
+    
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.setupViewController = self;
 }
 
 - (void)didReceiveMemoryWarning

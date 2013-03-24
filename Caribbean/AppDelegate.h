@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "IIViewDeckController.h"
+#import "SetupViewController.h"
 
 #define DATA_KEY_CREATE_TEAM @"CREATE_TEAM" // dataCache key for Create Team Flow
 #define DATA_KEY_TEAM_NAME @"TEAM_NAME" // dataCache -> CREATE_TEAM -> TEAM_NAME
@@ -22,6 +23,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (weak, nonatomic) UIViewController *setupViewController;
 
 #pragma mark - Application Runtime Data
 @property (strong, nonatomic) NSMutableDictionary *dataCache;
