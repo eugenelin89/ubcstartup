@@ -76,10 +76,17 @@
                                     <outlet property="delegate" destination="2" id="kIA-Q3-paF"/>
                                 </connections>
                             </tableView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-zo-dts">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="X2L-ND-IFE" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="JtX-Hq-BLZ"/>
+                            <constraint firstItem="nhX-zo-dts" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="N7n-Qq-FEZ"/>
+                            <constraint firstItem="nhX-zo-dts" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="XZs-T8-apT"/>
+                            <constraint firstItem="nhX-zo-dts" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="cJN-ch-RGo"/>
+                            <constraint firstItem="nhX-zo-dts" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="kL0-Gw-xi4"/>
                             <constraint firstItem="X2L-ND-IFE" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="orf-zW-pH0"/>
                             <constraint firstItem="X2L-ND-IFE" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ucg-jz-d26"/>
                             <constraint firstItem="X2L-ND-IFE" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="yaE-92-OC6"/>
@@ -93,11 +100,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Setup" id="4pK-C9-Iwt">
                             <connections>
-                                <segue destination="srY-9g-fcV" kind="push" id="eIZ-Zz-XAz"/>
+                                <action selector="setupButtonClicked:" destination="2" id="q7q-FR-Gtf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="fbLoginView" destination="nhX-zo-dts" id="JUX-NM-hYm"/>
                         <outlet property="tableView" destination="X2L-ND-IFE" id="qpr-t1-zOT"/>
                         <segue destination="ILz-Ck-ncd" kind="push" identifier="GameDetailSegue" id="G1S-FB-Ogs"/>
                     </connections>
@@ -111,7 +119,7 @@
             <objects>
                 <viewController id="srY-9g-fcV" customClass="SetupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0W9-kz-HiI">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1E-yN-bNy">
@@ -210,7 +218,7 @@
             <objects>
                 <viewController id="hfn-FY-PIM" customClass="SelectTeamViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4yq-Sz-BGd">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L1O-5Z-940">

@@ -22,6 +22,7 @@
 @property (nonatomic) Boolean isFullMap;
 @property (strong, nonatomic) NSArray *targets; // array of dics for each target
 @property (strong, nonatomic) NSArray *annotations;
+@property (weak, nonatomic) IBOutlet UIView *fbLoginView;
 
 @end
 
@@ -57,6 +58,14 @@
 {
     [super viewDidAppear:animated];
     NSLog(@"ViewController viewDidAppear");
+    
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [self hideFbLoginViewWithAnimateDuration:0 andDelay:0];
     
 }
 
@@ -243,6 +252,27 @@
 
 
 #pragma mark - IBActions
+
+
+- (IBAction)setupButtonClicked:(id)sender
+{
+    if(FBSession.activeSession.state == FBSessionStateOpen){
+        // we are logged in.  Do nothing.
+    }
+    else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        NSLog(@"playGame!  FBSessionStateCreatedTokenLoaded");
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        [appDelegate openSessionWithAllowLoginUI:NO];
+    }else {
+        // We don't know whether we logged in.  So we will just ask the user to do a log in.
+        NSLog(@"state not equal to toekn loaded, displaying login");
+        
+        // Dropdown fbLoginView
+        [self dropdownFbLoginView];
+        //self.loginButton.enabled = YES;
+    }
+}
+
 // not used anymore
 - (IBAction)menuButtonClicked:(id)sender
 {
@@ -304,6 +334,30 @@
         [self.tableView endUpdates];
         
     }completion:^(BOOL finished){
+        
+    }];
+}
+
+-(void)hideFbLoginViewWithAnimateDuration:(float)duration andDelay:(float)delay
+{
+    [UIView animateWithDuration:duration delay:delay options:0 animations:^{
+        CGRect frame = self.view.frame;
+        frame.origin.y -= frame.size.height;
+        [self.fbLoginView setFrame: frame];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+-(void)dropdownFbLoginView
+{
+    // Dropdown fbLoginView
+    [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+        
+        CGRect frame = self.fbLoginView.frame;
+        frame.origin.y = 0;
+        [self.fbLoginView setFrame:frame];
+    } completion:^(BOOL finished) {
         
     }];
 }
