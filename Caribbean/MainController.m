@@ -24,7 +24,7 @@
     
     if(FBSession.activeSession.isOpen)
     {
-        NSString *query = @"SELECT id, name, pic_square FROM profile where id in ( SELECT uid2 FROM friend WHERE uid1 = me()) order by name";
+        NSString *query = @"SELECT id, name, pic ,pic_square FROM profile where id in ( SELECT uid2 FROM friend WHERE uid1 = me()) order by name";
         NSDictionary *queryParam =
         [NSDictionary dictionaryWithObjectsAndKeys:query, @"q", nil];
         

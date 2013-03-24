@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1041299016BF43D00030636E /* GameDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041298F16BF43D00030636E /* GameDetailViewController.m */; };
 		104D298E16C114D7009D4256 /* MapUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D298D16C114D7009D4256 /* MapUtility.m */; };
+		104E290F16FF671800CDDEE3 /* ConfirmDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104E290E16FF671800CDDEE3 /* ConfirmDateViewController.m */; };
 		105C27B416B0870100AFB93A /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C27B316B0870100AFB93A /* AppModel.m */; };
 		105C27CA16B0A33000AFB93A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105C27C916B0A33000AFB93A /* MapKit.framework */; };
 		105C27CC16B0B09700AFB93A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105C27CB16B0B09700AFB93A /* CoreLocation.framework */; };
@@ -54,6 +55,8 @@
 		1041298F16BF43D00030636E /* GameDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDetailViewController.m; sourceTree = "<group>"; };
 		104D298C16C114D7009D4256 /* MapUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapUtility.h; sourceTree = "<group>"; };
 		104D298D16C114D7009D4256 /* MapUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapUtility.m; sourceTree = "<group>"; };
+		104E290D16FF671800CDDEE3 /* ConfirmDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmDateViewController.h; sourceTree = "<group>"; };
+		104E290E16FF671800CDDEE3 /* ConfirmDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmDateViewController.m; sourceTree = "<group>"; };
 		105C27B216B0870100AFB93A /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		105C27B316B0870100AFB93A /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		105C27C716B09E6A00AFB93A /* DummyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyData.h; sourceTree = "<group>"; };
@@ -179,6 +182,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		104E290C16FF66D700CDDEE3 /* View 6 - Confirm Date View */ = {
+			isa = PBXGroup;
+			children = (
+				104E290D16FF671800CDDEE3 /* ConfirmDateViewController.h */,
+				104E290E16FF671800CDDEE3 /* ConfirmDateViewController.m */,
+			);
+			name = "View 6 - Confirm Date View";
+			sourceTree = "<group>";
+		};
 		10903FE116D8621C00813FB6 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,8 +260,9 @@
 				10B12A9E16E5334B00387E2C /* View 3 - Game Playing */,
 				10F22A3D16FECFC9000A509C /* View 4 - Setup View */,
 				10F22A4D16FEFEE6000A509C /* View 5 - Select Date View */,
-				10A0C4D316AE047C00EAC683 /* AppDelegate.h */,
+				104E290C16FF66D700CDDEE3 /* View 6 - Confirm Date View */,
 				10A0C4D416AE047C00EAC683 /* AppDelegate.m */,
+				10A0C4D316AE047C00EAC683 /* AppDelegate.h */,
 				10A0C4DC16AE047C00EAC683 /* MainStoryboard.storyboard */,
 				1094A90216E7F721001F2E7E /* Base View */,
 				105C27B216B0870100AFB93A /* AppModel.h */,
@@ -414,6 +427,7 @@
 				10F22A4316FEDAB0000A509C /* MainController.m in Sources */,
 				10F22A5216FEFFE3000A509C /* FbFriendCell.m in Sources */,
 				10F22A5316FEFFE3000A509C /* SelectTeamViewController.m in Sources */,
+				104E290F16FF671800CDDEE3 /* ConfirmDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
