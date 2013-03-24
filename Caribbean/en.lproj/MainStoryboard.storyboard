@@ -373,8 +373,8 @@
                         <outlet property="inProgressLabel" destination="5Zx-Ug-Tdt" id="ydI-UW-bM9"/>
                         <outlet property="loginButton" destination="KLx-2f-eUY" id="CaH-V4-qaJ"/>
                         <outlet property="mapView" destination="C6e-TR-B45" id="SiB-TZ-kID"/>
+                        <outlet property="pointsLabel" destination="pyw-sm-W67" id="Qfa-v6-PtC"/>
                         <outlet property="toolBar" destination="nJs-RU-wmo" id="WeE-9C-yeX"/>
-                        <outlet property="totalPrizesLabel" destination="pyw-sm-W67" id="XNi-Jr-9Ia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpd-K8-2aY" userLabel="First Responder" sceneMemberID="firstResponder"/>

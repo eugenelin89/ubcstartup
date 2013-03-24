@@ -33,7 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *inProgressLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *fbLoginView;
-@property (weak, nonatomic) IBOutlet UILabel *totalPrizesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentPlayersLabel;
 // The tricky part is that the view has 3 states: full map, full detail, split view
 // We use the isSplitView to determine if we are at split view mode so we can either expand map or detail
@@ -354,7 +354,7 @@ bool _blinkStatus = NO;
     
     // Total Prize
     NSNumber *totalPrize = [self.targetDic objectForKey:@"points"];
-    self.totalPrizesLabel.text = [totalPrize stringValue];
+    self.pointsLabel.text = [totalPrize stringValue];
     
     
     // Total Players
