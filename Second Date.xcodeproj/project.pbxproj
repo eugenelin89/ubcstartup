@@ -42,6 +42,8 @@
 		10F22A3C16FECD4A000A509C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A3B16FECD4A000A509C /* QuartzCore.framework */; };
 		10F22A4016FED538000A509C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A3F16FED538000A509C /* SetupViewController.m */; };
 		10F22A4316FEDAB0000A509C /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A4216FEDAB0000A509C /* MainController.m */; };
+		10F22A4716FEE5F3000A509C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4616FEE5F3000A509C /* ImageIO.framework */; };
+		10F22A4916FEE9D9000A509C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4816FEE9D9000A509C /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,8 @@
 		10F22A3F16FED538000A509C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		10F22A4116FEDAAF000A509C /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		10F22A4216FEDAB0000A509C /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		10F22A4616FEE5F3000A509C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		10F22A4816FEE9D9000A509C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F22A4716FEE5F3000A509C /* ImageIO.framework in Frameworks */,
 				10F22A3C16FECD4A000A509C /* QuartzCore.framework in Frameworks */,
 				105C27CC16B0B09700AFB93A /* CoreLocation.framework in Frameworks */,
 				105C27CA16B0A33000AFB93A /* MapKit.framework in Frameworks */,
@@ -116,6 +121,7 @@
 				10A0C4C716AE047C00EAC683 /* Foundation.framework in Frameworks */,
 				10A0C4C916AE047C00EAC683 /* CoreGraphics.framework in Frameworks */,
 				10A0C4E816AE05A100EAC683 /* FacebookSDK.framework in Frameworks */,
+				10F22A4916FEE9D9000A509C /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +191,8 @@
 		10A0C4B516AE047C00EAC683 = {
 			isa = PBXGroup;
 			children = (
+				10F22A4816FEE9D9000A509C /* SDWebImage.framework */,
+				10F22A4616FEE5F3000A509C /* ImageIO.framework */,
 				10F22A3B16FECD4A000A509C /* QuartzCore.framework */,
 				10F22A2816FE98FA000A509C /* photo.png */,
 				105C27CB16B0B09700AFB93A /* CoreLocation.framework */,
@@ -453,11 +461,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Caribbean/Second Date-Prefix.pch";
 				INFOPLIST_FILE = "Caribbean/Second Date-Info.plist";
-				OTHER_LDFLAGS = "-lsqlite3.0";
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "Second Date";
 				WRAPPER_EXTENSION = app;
 			};
@@ -469,11 +481,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Caribbean/Second Date-Prefix.pch";
 				INFOPLIST_FILE = "Caribbean/Second Date-Info.plist";
-				OTHER_LDFLAGS = "-lsqlite3.0";
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "Second Date";
 				WRAPPER_EXTENSION = app;
 			};

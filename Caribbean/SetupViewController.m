@@ -8,6 +8,7 @@
 
 #import "SetupViewController.h"
 #import "AppDelegate.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface SetupViewController ()
