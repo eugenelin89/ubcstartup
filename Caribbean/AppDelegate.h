@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "IIViewDeckController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
