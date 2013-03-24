@@ -237,17 +237,17 @@
 		10A0C4CA16AE047C00EAC683 /* SecondDate */ = {
 			isa = PBXGroup;
 			children = (
-				10F22A4D16FEFEE6000A509C /* View 5 - Select Date View */,
 				10F22A4A16FEF7E4000A509C /* Images */,
 				10F22A4116FEDAAF000A509C /* MainController.h */,
 				10F22A4216FEDAB0000A509C /* MainController.m */,
-				10F22A3D16FECFC9000A509C /* View 4 - Setup View */,
 				10F22A3316FECC8E000A509C /* ViewDeck */,
 				104D298A16C11489009D4256 /* Utilities */,
 				1041298C16BF42CF0030636E /* View 0 - Login */,
 				1041298A16BF42670030636E /* View 1 - Entry View */,
 				1041298D16BF43340030636E /* View 2 - Game Detail */,
 				10B12A9E16E5334B00387E2C /* View 3 - Game Playing */,
+				10F22A3D16FECFC9000A509C /* View 4 - Setup View */,
+				10F22A4D16FEFEE6000A509C /* View 5 - Select Date View */,
 				10A0C4D316AE047C00EAC683 /* AppDelegate.h */,
 				10A0C4D416AE047C00EAC683 /* AppDelegate.m */,
 				10A0C4DC16AE047C00EAC683 /* MainStoryboard.storyboard */,

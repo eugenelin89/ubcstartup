@@ -46,6 +46,8 @@
     // reference to the AppDelegate's data cache
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
+
+    
     // populate friends and displayFriends array
     self.friends = [appDelegate.dataCache objectForKey: DATA_KEY_FB_FRIENDS];
 

@@ -22,9 +22,9 @@
 @property (weak, nonatomic) id<FbFriendCellDelegate> delegate;
 
 // Don't confuse the two below.
-// teamDic is ref to the dataCache.  When user adds friend to team, we add here.
+// dateDic is ref to the dataCache.  When user adds friend as date, we add here.
 // fbFriendDic is the FB user's info for this cell.
-@property (weak, nonatomic) NSMutableDictionary *teamDic;
+@property (weak, nonatomic) NSMutableDictionary *dateDic;
 @property (strong, nonatomic) NSDictionary *fbFriendDic;
 
 -(void)refreshCell;

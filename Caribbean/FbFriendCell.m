@@ -7,12 +7,13 @@
 //
 
 #import "FbFriendCell.h"
+#import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #define ALPHA 0.8
 
 @implementation FbFriendCell
-@synthesize teamDic = _teamDic;
+@synthesize dateDic = _dateDic;
 @synthesize fbFriendDic = _fbFriendDic;
 @synthesize delegate = _delegate;
 
@@ -44,35 +45,56 @@
     NSString *url = [self.fbFriendDic objectForKey:@"pic_square"];
     NSURL *nUrl = [NSURL URLWithString:url];
     [self.FriendImageView setImageWithURL:nUrl];
-    // check to see if this guy already in the team
-    NSString *memberFbId = [self.teamDic objectForKey:[self.fbFriendDic objectForKey:@"id"]];
-    if(memberFbId){
-        [self updateCellForMemberRemove];
+    // check to see if this guy already has a date
+    // check the DATE in Data Cache
+    // Silly code... clean up later...
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary *dateDic = [appDelegate.dataCache objectForKey:DATA_KEY_DATE];
+    
+    if(dateDic){
+        // user has a date.  Is it me?
+        NSNumber *dateFbId = [dateDic objectForKey:@"id"];
+        NSNumber *myFbId = [self.fbFriendDic objectForKey:@"id"];
+        if(dateFbId.intValue == myFbId.intValue){
+            //If it's me.  They should be able to remove me.
+            [self updateCellForMemberRemove];
+        }else{
+            [self updateCellForFriendAdd];
+        }
     }else{
         [self updateCellForFriendAdd];
     }
 }
 
 #pragma mark - Private Methods
+
+
 -(void)addOrDeleteFriend
 {
     NSString *friendFbDic = [self.fbFriendDic objectForKey:@"id"];
     
-    
-    
-    if([self.teamDic objectForKey:friendFbDic]) // is this friend already in the team?
-    {
-        // 1. Remove Friend
-        [self.teamDic removeObjectForKey:friendFbDic];
-        // 2. Configure cell so user may add the friend to team again
-        [self updateCellForFriendAdd];
 
-    }else{
-        // 1. Add Friend
-        [self.teamDic setObject:self.fbFriendDic forKey:friendFbDic];
-        // 2. Configure cell so user may remove the friend from team later
+    // check the DATE in Data Cache
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSMutableDictionary *dateDic = [appDelegate.dataCache objectForKey:DATA_KEY_DATE];
+    
+    if(!dateDic){
+        // user doesn't have a date, add me to it!
+        [appDelegate.dataCache setObject:self.fbFriendDic forKey:DATA_KEY_DATE];
         [self updateCellForMemberRemove];
+        
+    }else{
+        // user has a date.  Is it me?
+        NSNumber *dateFbId = [dateDic objectForKey:@"id"];
+        NSNumber *myFbId = [self.fbFriendDic objectForKey:@"id"];
+        if(dateFbId.intValue == myFbId.intValue){
+            //If it's me, it means I need to remove myself!
+            [appDelegate.dataCache removeObjectForKey:DATA_KEY_DATE];
+            [self updateCellForFriendAdd];
+        }
     }
+    
+    
     [self.delegate friendAddedOrRemoved];
 }
 
