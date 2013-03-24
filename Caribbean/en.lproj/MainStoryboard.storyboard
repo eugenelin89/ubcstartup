@@ -503,8 +503,8 @@
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJs-RU-wmo">
                                 <items>
-                                    <barButtonItem width="249" style="plain" systemItem="fixedSpace" id="SW8-tP-gXN"/>
-                                    <barButtonItem title="Play!" id="TJ0-XG-dU1">
+                                    <barButtonItem width="229" style="plain" systemItem="fixedSpace" id="SW8-tP-gXN"/>
+                                    <barButtonItem title="Validate" id="TJ0-XG-dU1">
                                         <connections>
                                             <action selector="playGame:" destination="ILz-Ck-ncd" id="him-Lp-7Gu"/>
                                         </connections>
@@ -582,15 +582,6 @@
                                     <constraint firstItem="aaY-sR-YzM" firstAttribute="trailing" secondItem="Uqn-Mu-m6v" secondAttribute="trailing" type="default" id="xgw-S8-O6E"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game in Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zx-Ug-Tdt">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1VF-by-YUq"/>
-                                    <constraint firstAttribute="width" constant="180" id="KO8-d5-AbI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -603,13 +594,11 @@
                             <constraint firstItem="q1C-0k-KQD" firstAttribute="top" secondItem="qJ2-Vs-5Ol" secondAttribute="top" type="default" id="X2j-ah-9oM"/>
                             <constraint firstItem="C6e-TR-B45" firstAttribute="top" secondItem="qJ2-Vs-5Ol" secondAttribute="top" type="default" id="ZZq-0Z-oi9"/>
                             <constraint firstItem="nJs-RU-wmo" firstAttribute="trailing" secondItem="qJ2-Vs-5Ol" secondAttribute="trailing" type="default" id="dFd-n0-n1u"/>
-                            <constraint firstItem="5Zx-Ug-Tdt" firstAttribute="top" secondItem="qJ2-Vs-5Ol" secondAttribute="top" constant="10" id="jpN-ZW-PQf"/>
                             <constraint firstItem="C6e-TR-B45" firstAttribute="trailing" secondItem="qJ2-Vs-5Ol" secondAttribute="trailing" type="default" id="kPb-PL-pB2"/>
                             <constraint firstItem="nJs-RU-wmo" firstAttribute="leading" secondItem="qJ2-Vs-5Ol" secondAttribute="leading" type="default" id="pwF-p0-cFb"/>
                             <constraint firstItem="C6e-TR-B45" firstAttribute="leading" secondItem="qJ2-Vs-5Ol" secondAttribute="leading" type="default" id="qY1-3A-hkh"/>
                             <constraint firstItem="q1C-0k-KQD" firstAttribute="trailing" secondItem="qJ2-Vs-5Ol" secondAttribute="trailing" type="default" id="s47-bX-jVP"/>
                             <constraint firstItem="C6e-TR-B45" firstAttribute="bottom" secondItem="qJ2-Vs-5Ol" secondAttribute="bottom" type="default" id="vSV-hZ-RVj"/>
-                            <constraint firstItem="5Zx-Ug-Tdt" firstAttribute="centerX" secondItem="nJs-RU-wmo" secondAttribute="centerX" type="default" id="xbd-L2-ygN"/>
                             <constraint firstItem="eyj-Cr-05Y" firstAttribute="trailing" secondItem="qJ2-Vs-5Ol" secondAttribute="trailing" type="default" id="ycl-aZ-yv9"/>
                         </constraints>
                     </view>
@@ -626,7 +615,6 @@
                         <outlet property="gameEndDateTimeLabel" destination="s3e-7a-xJ7" id="HHS-Qk-xBm"/>
                         <outlet property="gameStatusLabel" destination="RMG-e1-O7n" id="j1I-X4-rhk"/>
                         <outlet property="headerImageView" destination="8ww-oQ-RYm" id="wGE-Cs-AvH"/>
-                        <outlet property="inProgressLabel" destination="5Zx-Ug-Tdt" id="ydI-UW-bM9"/>
                         <outlet property="loginButton" destination="KLx-2f-eUY" id="CaH-V4-qaJ"/>
                         <outlet property="mapView" destination="C6e-TR-B45" id="SiB-TZ-kID"/>
                         <outlet property="pointsLabel" destination="pyw-sm-W67" id="Qfa-v6-PtC"/>
@@ -659,6 +647,79 @@
     <resources>
         <image name="profile_placeholder.gif" width="136" height="154"/>
     </resources>
+    <classes>
+        <class className="FbFriendCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FbFriendCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="AddFriendLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="FriendImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="FriendNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="GameDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="MapViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SelectTeamViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectTeamViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="friendSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="friendSearchTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="nextButtun" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="SetupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TargetViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonClicked:"/>
+                <relationship kind="action" name="loginButtonClicked:"/>
+                <relationship kind="action" name="mapCloseButtonClicked:"/>
+                <relationship kind="action" name="menuButtonClicked:"/>
+                <relationship kind="action" name="setupButtonClicked:"/>
+                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -40,7 +40,7 @@ NSString *const SignificantLocationChageNotification = @"com.eugenicode.Caribbea
     });
     */
     
-    int64_t delayInSeconds = 3.0; // simulate network delay
+    int64_t delayInSeconds = 1.0; // simulate network delay
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [delegate receivedTargets:[dic objectForKey:@"data"]];

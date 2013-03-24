@@ -30,7 +30,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *gameEndDateTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gameStatusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-@property (weak, nonatomic) IBOutlet UILabel *inProgressLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *fbLoginView;
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
@@ -75,7 +74,6 @@
     
     [self hideFbLoginViewWithAnimateDuration:0 andDelay:0];
     
-    self.inProgressLabel.alpha = 0;
 
     // layout map view
     [self splitScreen];     
@@ -216,17 +214,6 @@
 
 #pragma mark - Private Functions
 
-bool _blinkStatus = NO;
--(void)blinkGameInProgressText
-{
-    if(_blinkStatus == FALSE){
-        self.inProgressLabel.alpha = 1.0;
-        _blinkStatus = TRUE;
-    }else {
-        self.inProgressLabel.alpha = 0.0;
-        _blinkStatus = FALSE;
-    }
-}
 
 
 -(void)playMode
@@ -239,9 +226,7 @@ bool _blinkStatus = NO;
         // no need to do anything
     }
     
-    self.blinkTimer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)(0.5)  target:self selector:@selector(blinkGameInProgressText) userInfo:nil repeats:TRUE];
-    _blinkStatus = FALSE;
-    [self.blinkTimer fire];
+
 }
 
 -(void)dropdownFbLoginView
