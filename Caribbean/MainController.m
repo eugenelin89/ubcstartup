@@ -40,4 +40,30 @@
     }
 }
 
++(void)getMyFbInfo:(id<MainControllerDelegate>)sender
+{
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        [appDelegate openSessionWithAllowLoginUI:NO];
+    }
+    
+    
+    if(FBSession.activeSession.isOpen)
+    {
+        NSString *query = @"SELECT id, name, pic_square, pic_big, pic FROM profile where id = me()";
+        NSDictionary *queryParam =
+        [NSDictionary dictionaryWithObjectsAndKeys:query, @"q", nil];
+        
+        [FBRequestConnection startWithGraphPath:@"fql" parameters:queryParam HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if(error){
+                // handle error
+            }else{
+                if([sender respondsToSelector:@selector(myFbInfoRetrieved:)]){
+                    [sender myFbInfoRetrieved:result];
+                }
+            }
+        }];
+    }
+}
+
 @end

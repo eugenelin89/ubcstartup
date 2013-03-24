@@ -10,8 +10,10 @@
 @protocol MainControllerDelegate<NSObject>
 @optional
 -(void)myFbFriendsRetrieved:(NSDictionary *)friends;
+-(void)myFbInfoRetrieved:(NSDictionary *) me;
 @end
 
 @interface MainController : NSObject
 +(void)getMyFbFriends:(id<MainControllerDelegate>) sender;
++(void)getMyFbInfo:(id<MainControllerDelegate>)sender;
 @end

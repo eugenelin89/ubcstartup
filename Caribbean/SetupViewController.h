@@ -10,5 +10,6 @@
 #import "MainController.h"
 
 @interface SetupViewController : UIViewController<MainControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *myProfileImageView;
 
 @end

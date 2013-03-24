@@ -113,9 +113,24 @@
                     <view key="view" contentMode="scaleToFill" id="0W9-kz-HiI">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-59-boK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="APd-ns-2br"/>
+                                    <constraint firstAttribute="width" constant="100" id="MX9-oG-RiU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UOM-59-boK" firstAttribute="leading" secondItem="0W9-kz-HiI" secondAttribute="leading" constant="28" id="l3R-bB-jdb"/>
+                            <constraint firstItem="UOM-59-boK" firstAttribute="top" secondItem="0W9-kz-HiI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ne1-M8-pmy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ith-vC-j7E"/>
+                    <connections>
+                        <outlet property="myProfileImageView" destination="UOM-59-boK" id="RB9-Mh-b3t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gev-EL-Thh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

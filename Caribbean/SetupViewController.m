@@ -31,6 +31,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // Get My FB Info
+    [MainController getMyFbInfo:self];
+    
     // Pre-fetch FB Friends from FB.
     // We know that we gonna need it in the next step.  So improve the experience by fetching it now.
     [MainController getMyFbFriends:self];
@@ -48,6 +51,14 @@
     NSArray *friendsArray = [friends objectForKey:@"data"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate.dataCache setObject:friendsArray forKey:DATA_KEY_FB_FRIENDS];
+}
+
+-(void)myFbInfoRetrieved:(NSDictionary *)me
+{
+    NSArray *myFbArray = [me objectForKey:@"data"];
+    NSString *strUrl = [[myFbArray objectAtIndex:0] objectForKey:@"pic"];
+    NSURL *nUrl = [NSURL URLWithString:strUrl];
+    [self.myProfileImageView setImageWithURL:nUrl];
 }
 
 @end
