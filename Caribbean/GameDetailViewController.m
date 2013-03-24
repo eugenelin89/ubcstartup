@@ -352,7 +352,7 @@ bool _blinkStatus = NO;
         self.gameEndDateTimeLabel.text = [NSString stringWithFormat:@"Ends: %@", gameEndsAt];
     }
     
-    // Total Prize
+    // Points
     NSNumber *points = [self.targetDic objectForKey:@"points"];
     self.pointsLabel.text = [points stringValue];
     
