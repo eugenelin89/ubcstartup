@@ -22,7 +22,7 @@
 
 -(NSString *)title
 {
-    return [self.targetDic objectForKey:@"prize"];
+    return [self.targetDic objectForKey:@"title"];
 }
 
 -(id) initWithTargetDic:(NSDictionary *)targetDic

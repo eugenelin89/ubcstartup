@@ -110,7 +110,7 @@
         //NSString *temp = [NSString stringWithFormat:@"section: %d, row: %d", indexPath.section, indexPath.row];
         //cell.textLabel.text = temp;
         NSDictionary *targetDic = [self.targets objectAtIndex:indexPath.row-1];
-        ((TargetViewCell *)cell).targetTextLabel.text = [targetDic objectForKey:@"prize"];
+        ((TargetViewCell *)cell).targetTextLabel.text = [targetDic objectForKey:@"title"];
     }
     
     return cell;

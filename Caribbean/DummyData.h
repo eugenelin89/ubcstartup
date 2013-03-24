@@ -11,7 +11,7 @@
 
 #define DUMMY_TARGETS_JSON @"{\"data\" :\
 [\
-{\"id\": 1, \"prize\":\"Free Pizza\", \"loc\":[49.216338, -122.981009]\
+{\"id\": 1, \"title\":\"Free Pizza\", \"loc\":[49.216338, -122.981009]\
 ,\"name\":\"Freshslice Pizza\"\
 ,\"desc1\":\"Snap a picture of the sign at this location and receive\"\
 ,\"desc2\":\"one slice of freshly baked pizza from Freshslice Pizza.\"\
@@ -23,7 +23,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 2, \"prize\":\"Free Pizza\", \"loc\":[49.283868, -123.111961]\
+{\"id\": 2, \"title\":\"Free Pizza\", \"loc\":[49.283868, -123.111961]\
 ,\"name\":\"Michael Angelos Mega Slice\"\
 ,\"desc1\":\"Snap a picture of Michael Angelos himself,\"\
 ,\"desc2\":\"Get a free slice of pizza from Michael Angelos!\"\
@@ -35,7 +35,7 @@
 ,\"points\":100\
 ,\"currentPlayers\":21\
 },\
-{\"id\": 3, \"prize\":\"50% Sandwich\", \"loc\":[49.273868, -123.111961]\
+{\"id\": 3, \"title\":\"50% Sandwich\", \"loc\":[49.273868, -123.111961]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -47,7 +47,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 4, \"prize\":\"Free Bubble Tea\", \"loc\":[49.283868, -123.121961]\
+{\"id\": 4, \"title\":\"Free Bubble Tea\", \"loc\":[49.283868, -123.121961]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -59,7 +59,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 5, \"prize\":\"Free Pop\", \"loc\":[49.273868, -123.126961]\
+{\"id\": 5, \"title\":\"Free Pop\", \"loc\":[49.273868, -123.126961]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -71,7 +71,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 6, \"prize\":\"Free Hotdog\", \"loc\":[49.278868, -123.101961]\
+{\"id\": 6, \"title\":\"Free Hotdog\", \"loc\":[49.278868, -123.101961]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -83,7 +83,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 7, \"prize\":\"Free Cheese Burger\", \"loc\":[49.216338, -122.971009]\
+{\"id\": 7, \"title\":\"Free Cheese Burger\", \"loc\":[49.216338, -122.971009]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -95,7 +95,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 8, \"prize\":\"Free Rice Noodle\", \"loc\":[49.206338, -122.981009]\
+{\"id\": 8, \"title\":\"Free Rice Noodle\", \"loc\":[49.206338, -122.981009]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -107,7 +107,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 9, \"prize\":\"$2 off Quizno's\", \"loc\":[49.216338, -122.991009]\
+{\"id\": 9, \"title\":\"$2 off Quizno's\", \"loc\":[49.216338, -122.991009]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
@@ -119,7 +119,7 @@
 ,\"points\":0\
 ,\"currentPlayers\":0\
 },\
-{\"id\": 10, \"prize\":\"Free Tacos\", \"loc\":[49.226338, -122.981009]\
+{\"id\": 10, \"title\":\"Free Tacos\", \"loc\":[49.226338, -122.981009]\
 ,\"name\":\"\"\
 ,\"desc1\":\"\"\
 ,\"desc2\":\"\"\
