@@ -114,17 +114,46 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-59-boK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1E-yN-bNy">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-59-boK">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DlN-wP-huE"/>
+                                            <constraint firstAttribute="width" constant="100" id="MX9-oG-RiU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_placeholder.gif" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-Cg-0I4">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Hag-qB-aH4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Team:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-C6-4sa">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="zB6-en-cyw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="APd-ns-2br"/>
-                                    <constraint firstAttribute="width" constant="100" id="MX9-oG-RiU"/>
+                                    <constraint firstItem="gCx-C6-4sa" firstAttribute="leading" secondItem="d1E-yN-bNy" secondAttribute="leading" constant="36" id="Qo2-4I-5Ci"/>
+                                    <constraint firstItem="UOM-59-boK" firstAttribute="top" secondItem="d1E-yN-bNy" secondAttribute="top" constant="50" id="VfV-fv-AQX"/>
+                                    <constraint firstItem="8ko-Cg-0I4" firstAttribute="top" secondItem="UOM-59-boK" secondAttribute="top" type="default" id="VkQ-TQ-aaJ"/>
+                                    <constraint firstItem="gCx-C6-4sa" firstAttribute="top" secondItem="d1E-yN-bNy" secondAttribute="top" constant="13" id="ZJZ-3L-M33"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ko-Cg-0I4" secondAttribute="trailing" constant="36" id="i6v-Vr-krM"/>
+                                    <constraint firstItem="8ko-Cg-0I4" firstAttribute="bottom" secondItem="UOM-59-boK" secondAttribute="bottom" type="default" id="uWa-w6-saE"/>
+                                    <constraint firstItem="gCx-C6-4sa" firstAttribute="leading" secondItem="UOM-59-boK" secondAttribute="leading" type="default" id="wzj-g3-dGG"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UOM-59-boK" firstAttribute="leading" secondItem="0W9-kz-HiI" secondAttribute="leading" constant="28" id="l3R-bB-jdb"/>
-                            <constraint firstItem="UOM-59-boK" firstAttribute="top" secondItem="0W9-kz-HiI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ne1-M8-pmy"/>
+                            <constraint firstItem="d1E-yN-bNy" firstAttribute="trailing" secondItem="0W9-kz-HiI" secondAttribute="trailing" type="default" id="2HS-uq-UZ6"/>
+                            <constraint firstItem="d1E-yN-bNy" firstAttribute="leading" secondItem="0W9-kz-HiI" secondAttribute="leading" type="default" id="6UE-gA-Fyl"/>
+                            <constraint firstItem="d1E-yN-bNy" firstAttribute="top" secondItem="0W9-kz-HiI" secondAttribute="top" type="default" id="8Wi-3a-TmQ"/>
+                            <constraint firstAttribute="bottom" secondItem="d1E-yN-bNy" secondAttribute="bottom" constant="217" id="HTg-np-24m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ith-vC-j7E"/>
@@ -438,6 +467,58 @@
             <point key="canvasLocation" x="288" y="43"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile_placeholder.gif" width="136" height="154"/>
+    </resources>
+    <classes>
+        <class className="GameDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="inProgressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="MapViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SetupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TargetViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

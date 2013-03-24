@@ -44,6 +44,7 @@
 		10F22A4316FEDAB0000A509C /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A4216FEDAB0000A509C /* MainController.m */; };
 		10F22A4716FEE5F3000A509C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4616FEE5F3000A509C /* ImageIO.framework */; };
 		10F22A4916FEE9D9000A509C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4816FEE9D9000A509C /* SDWebImage.framework */; };
+		10F22A4C16FEF800000A509C /* profile_placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 10F22A4B16FEF800000A509C /* profile_placeholder.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		10F22A4216FEDAB0000A509C /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		10F22A4616FEE5F3000A509C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		10F22A4816FEE9D9000A509C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		10F22A4B16FEF800000A509C /* profile_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = profile_placeholder.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		10A0C4CA16AE047C00EAC683 /* SecondDate */ = {
 			isa = PBXGroup;
 			children = (
+				10F22A4A16FEF7E4000A509C /* Images */,
 				10F22A4116FEDAAF000A509C /* MainController.h */,
 				10F22A4216FEDAB0000A509C /* MainController.m */,
 				10F22A3D16FECFC9000A509C /* View 4 - Setup View */,
@@ -295,6 +298,15 @@
 			name = "View 4 - Setup View";
 			sourceTree = "<group>";
 		};
+		10F22A4A16FEF7E4000A509C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				10F22A4B16FEF800000A509C /* profile_placeholder.gif */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +367,7 @@
 				10A0C4FD16AE1E0500EAC683 /* FbLoginViewController.xib in Resources */,
 				10903FE416D8623800813FB6 /* Flag_of_Canada.png in Resources */,
 				10F22A2916FE98FA000A509C /* photo.png in Resources */,
+				10F22A4C16FEF800000A509C /* profile_placeholder.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
