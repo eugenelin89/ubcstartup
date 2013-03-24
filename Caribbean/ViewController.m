@@ -14,6 +14,7 @@
 #import "TargetAnnotation.h"
 #import "GameDetailViewController.h"
 #import "MapUtility.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ViewController ()<UIActionSheetDelegate, AppModelDelegate, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -127,6 +128,10 @@
         //cell.textLabel.text = temp;
         NSDictionary *targetDic = [self.targets objectAtIndex:indexPath.row-1];
         ((TargetViewCell *)cell).targetTextLabel.text = [targetDic objectForKey:@"title"];
+        
+        NSString *imageUrl = [targetDic objectForKey:@"brandImg"];
+        NSURL *url = [NSURL URLWithString:imageUrl];
+        [((TargetViewCell *)cell).targetImageView setImageWithURL:url];
     }
     
     return cell;

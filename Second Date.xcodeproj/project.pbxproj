@@ -10,6 +10,7 @@
 		1041299016BF43D00030636E /* GameDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1041298F16BF43D00030636E /* GameDetailViewController.m */; };
 		104D298E16C114D7009D4256 /* MapUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D298D16C114D7009D4256 /* MapUtility.m */; };
 		104E290F16FF671800CDDEE3 /* ConfirmDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104E290E16FF671800CDDEE3 /* ConfirmDateViewController.m */; };
+		104E291116FF85E800CDDEE3 /* mahonny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 104E291016FF85E800CDDEE3 /* mahonny.jpg */; };
 		105C27B416B0870100AFB93A /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C27B316B0870100AFB93A /* AppModel.m */; };
 		105C27CA16B0A33000AFB93A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105C27C916B0A33000AFB93A /* MapKit.framework */; };
 		105C27CC16B0B09700AFB93A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105C27CB16B0B09700AFB93A /* CoreLocation.framework */; };
@@ -57,6 +58,7 @@
 		104D298D16C114D7009D4256 /* MapUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapUtility.m; sourceTree = "<group>"; };
 		104E290D16FF671800CDDEE3 /* ConfirmDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmDateViewController.h; sourceTree = "<group>"; };
 		104E290E16FF671800CDDEE3 /* ConfirmDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmDateViewController.m; sourceTree = "<group>"; };
+		104E291016FF85E800CDDEE3 /* mahonny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mahonny.jpg; sourceTree = "<group>"; };
 		105C27B216B0870100AFB93A /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		105C27B316B0870100AFB93A /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		105C27C716B09E6A00AFB93A /* DummyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyData.h; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		10F22A4A16FEF7E4000A509C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				104E291016FF85E800CDDEE3 /* mahonny.jpg */,
 				10F22A4B16FEF800000A509C /* profile_placeholder.gif */,
 			);
 			name = Images;
@@ -399,6 +402,7 @@
 				10903FE416D8623800813FB6 /* Flag_of_Canada.png in Resources */,
 				10F22A2916FE98FA000A509C /* photo.png in Resources */,
 				10F22A4C16FEF800000A509C /* profile_placeholder.gif in Resources */,
+				104E291116FF85E800CDDEE3 /* mahonny.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

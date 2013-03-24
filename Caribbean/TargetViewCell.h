@@ -10,5 +10,6 @@
 
 @interface TargetViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *targetTextLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *targetImageView;
 
 @end
