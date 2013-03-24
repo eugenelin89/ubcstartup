@@ -396,6 +396,7 @@
         frame.origin.y -= frame.size.height;
         [self.fbLoginView setFrame: frame];
     } completion:^(BOOL finished) {
+        [self performSegueWithIdentifier:@"SETUP_SEGUE" sender:self];
     }];
 }
 
