@@ -41,6 +41,7 @@
 		10F22A3916FECC8E000A509C /* WrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A3716FECC8E000A509C /* WrapController.m */; };
 		10F22A3C16FECD4A000A509C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A3B16FECD4A000A509C /* QuartzCore.framework */; };
 		10F22A4016FED538000A509C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A3F16FED538000A509C /* SetupViewController.m */; };
+		10F22A4316FEDAB0000A509C /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A4216FEDAB0000A509C /* MainController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		10F22A3B16FECD4A000A509C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		10F22A3E16FED538000A509C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		10F22A3F16FED538000A509C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		10F22A4116FEDAAF000A509C /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		10F22A4216FEDAB0000A509C /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 		10A0C4CA16AE047C00EAC683 /* SecondDate */ = {
 			isa = PBXGroup;
 			children = (
+				10F22A4116FEDAAF000A509C /* MainController.h */,
+				10F22A4216FEDAB0000A509C /* MainController.m */,
 				10F22A3D16FECFC9000A509C /* View 4 - Setup View */,
 				10F22A3316FECC8E000A509C /* ViewDeck */,
 				104D298A16C11489009D4256 /* Utilities */,
@@ -367,6 +372,7 @@
 				10F22A3816FECC8E000A509C /* IIViewDeckController.m in Sources */,
 				10F22A3916FECC8E000A509C /* WrapController.m in Sources */,
 				10F22A4016FED538000A509C /* SetupViewController.m in Sources */,
+				10F22A4316FEDAB0000A509C /* MainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

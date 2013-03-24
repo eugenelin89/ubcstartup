@@ -10,9 +10,14 @@
 #import "AppModel.h"
 
 @implementation AppDelegate
+@synthesize dataCache = _dataCache;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    self.dataCache = [[NSMutableDictionary alloc] init];
+    
     // Override point for customization after application launch.
     // Start AppModel
     NSLog(@"applicaton:didFinishLaunchingWithOptions:");
@@ -128,5 +133,8 @@ NSString *const FBSessionStateChangedNotification = @"com.eugenicode.Caribbean:F
 - (void) closeSession {
     [FBSession.activeSession closeAndClearTokenInformation];
 }
+
+
+
 
 @end
