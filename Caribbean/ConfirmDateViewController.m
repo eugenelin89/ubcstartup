@@ -13,6 +13,7 @@
 
 @interface ConfirmDateViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *dateImageView;
+@property (weak, nonatomic) IBOutlet UILabel *dateNameLabel;
 
 @end
 
@@ -38,6 +39,7 @@
     
     NSURL *nUrl = [NSURL URLWithString:datePicUrl];
     [self.dateImageView setImageWithURL:nUrl];
+    self.dateNameLabel.text = [dateDic objectForKey:@"name"];
     
 }
 
@@ -45,6 +47,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)confirmButtonClicked:(id)sender
+{
+    
 }
 
 @end

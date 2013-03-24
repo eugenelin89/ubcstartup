@@ -378,25 +378,55 @@
                                             <constraint firstAttribute="width" constant="100" id="rj2-nX-eQz"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdj-zI-kmO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="rXv-Co-1fp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="VHp-iH-9Qf" firstAttribute="top" secondItem="Jdv-5K-DHN" secondAttribute="top" constant="50" id="35T-xG-6Gt"/>
+                                    <constraint firstItem="Wdj-zI-kmO" firstAttribute="trailing" secondItem="VHp-iH-9Qf" secondAttribute="trailing" type="default" id="E5A-2e-yzJ"/>
+                                    <constraint firstItem="Wdj-zI-kmO" firstAttribute="top" secondItem="VHp-iH-9Qf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FiW-oZ-hsB"/>
+                                    <constraint firstItem="Wdj-zI-kmO" firstAttribute="leading" secondItem="VHp-iH-9Qf" secondAttribute="leading" type="default" id="KFl-xy-ole"/>
                                     <constraint firstAttribute="trailing" secondItem="VHp-iH-9Qf" secondAttribute="trailing" constant="36" id="P9x-86-UJK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-2J-GIE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="emf-xZ-QdY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonClicked:" destination="mpy-LR-33Z" eventType="touchUpInside" id="tON-Nu-CmG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jdv-5K-DHN" firstAttribute="leading" secondItem="h5S-B9-wHo" secondAttribute="leading" type="default" id="PXs-1n-6Dr"/>
+                            <constraint firstItem="ceT-2J-GIE" firstAttribute="centerX" secondItem="Jdv-5K-DHN" secondAttribute="centerX" type="default" id="R5h-zA-aMF"/>
                             <constraint firstItem="Jdv-5K-DHN" firstAttribute="trailing" secondItem="h5S-B9-wHo" secondAttribute="trailing" type="default" id="Vjz-Us-JO9"/>
                             <constraint firstItem="Jdv-5K-DHN" firstAttribute="top" secondItem="h5S-B9-wHo" secondAttribute="top" type="default" id="YKB-bn-4uO"/>
-                            <constraint firstAttribute="bottom" secondItem="Jdv-5K-DHN" secondAttribute="bottom" constant="167" id="y0Y-Dv-aow"/>
+                            <constraint firstItem="ceT-2J-GIE" firstAttribute="top" secondItem="Jdv-5K-DHN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cVa-zj-NWQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ceT-2J-GIE" secondAttribute="bottom" constant="11" id="sgG-8D-xcI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ST4-BN-KHH"/>
                     <connections>
                         <outlet property="dateImageView" destination="VHp-iH-9Qf" id="m1i-an-gUY"/>
+                        <outlet property="dateNameLabel" destination="Wdj-zI-kmO" id="XR7-Ag-YOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mo4-WH-ZbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -696,86 +726,6 @@
     <resources>
         <image name="profile_placeholder.gif" width="136" height="154"/>
     </resources>
-    <classes>
-        <class className="ConfirmDateViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfirmDateViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FbFriendCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FbFriendCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="AddFriendLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="FriendImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="FriendNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="GameDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
-            </relationships>
-        </class>
-        <class className="MapViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SelectTeamViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectTeamViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="friendSearchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="friendSearchTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="nextButtun" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="SetupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TargetViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButtonClicked:"/>
-                <relationship kind="action" name="loginButtonClicked:"/>
-                <relationship kind="action" name="mapCloseButtonClicked:"/>
-                <relationship kind="action" name="menuButtonClicked:"/>
-                <relationship kind="action" name="setupButtonClicked:"/>
-                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
