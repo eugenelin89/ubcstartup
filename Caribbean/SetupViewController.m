@@ -26,6 +26,24 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+        NSLog(@"SetupView Appeared");
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        NSDictionary *dateDic = [appDelegate.dataCache objectForKey:DATA_KEY_DATE];
+    
+    
+        if(dateDic){
+            NSString *datePicUrl = [dateDic objectForKey:@"pic"];
+        
+            NSURL *nsurl = [NSURL URLWithString:datePicUrl];
+        
+            [self.dateImageView setImageWithURL:nsurl];
+            //self.dateNameLabel.text = [dateDic objectForKey:@"name"];
+        }
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

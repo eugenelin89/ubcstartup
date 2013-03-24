@@ -242,6 +242,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ith-vC-j7E"/>
                     <connections>
+                        <outlet property="dateImageView" destination="8ko-Cg-0I4" id="PuW-b9-y59"/>
                         <outlet property="myNameLabel" destination="5an-UR-Rqh" id="T4m-NZ-Z0i"/>
                         <outlet property="myProfileImageView" destination="UOM-59-boK" id="RB9-Mh-b3t"/>
                     </connections>

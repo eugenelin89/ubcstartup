@@ -12,5 +12,6 @@
 @interface SetupViewController : UIViewController<MainControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *myProfileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *myNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *dateImageView;
 
 @end
