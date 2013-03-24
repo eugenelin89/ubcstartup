@@ -242,9 +242,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbu-l9-Htj">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="264" id="4B1-zj-Apn"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Challenge another couple!">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,13 +251,27 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-0X-2HE">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="DtS-Pn-Cka"/>
+                                            <constraint firstAttribute="height" constant="53" id="sil-Bq-nMN"/>
+                                        </constraints>
+                                        <string key="text">Best of Vancouver! Vancouver is a romatic city if you know where to look.  Take your date on a day trip that will change your perspective of this city!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nVY-0X-2HE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1IQ-MN-bHD"/>
                                     <constraint firstItem="ES9-ic-9TO" firstAttribute="top" secondItem="bas-qU-83s" secondAttribute="top" constant="13" id="1bq-Se-4ce"/>
                                     <constraint firstAttribute="trailing" secondItem="Dbu-l9-Htj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="67K-Kx-hCd"/>
+                                    <constraint firstItem="Dbu-l9-Htj" firstAttribute="top" secondItem="nVY-0X-2HE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6yT-M7-SdC"/>
+                                    <constraint firstItem="nVY-0X-2HE" firstAttribute="leading" secondItem="ES9-ic-9TO" secondAttribute="leading" type="default" id="Dlj-3L-Fdd"/>
+                                    <constraint firstItem="nVY-0X-2HE" firstAttribute="leading" secondItem="Dbu-l9-Htj" secondAttribute="leading" type="default" id="Je2-lP-Eej"/>
+                                    <constraint firstItem="nVY-0X-2HE" firstAttribute="top" secondItem="bas-qU-83s" secondAttribute="top" constant="41" id="mc3-fR-FPC"/>
                                     <constraint firstAttribute="bottom" secondItem="Dbu-l9-Htj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="qak-dm-uKL"/>
-                                    <constraint firstItem="ES9-ic-9TO" firstAttribute="leading" secondItem="Dbu-l9-Htj" secondAttribute="leading" type="default" id="u9V-R2-49P"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -273,7 +284,6 @@
                             <constraint firstItem="bas-qU-83s" firstAttribute="trailing" secondItem="0W9-kz-HiI" secondAttribute="trailing" type="default" id="Fe7-cF-kIq"/>
                             <constraint firstAttribute="bottom" secondItem="d1E-yN-bNy" secondAttribute="bottom" constant="167" id="JsP-Mr-Ddc"/>
                             <constraint firstItem="bas-qU-83s" firstAttribute="leading" secondItem="0W9-kz-HiI" secondAttribute="leading" type="default" id="fKj-lV-xDx"/>
-                            <constraint firstItem="bas-qU-83s" firstAttribute="top" secondItem="0W9-kz-HiI" secondAttribute="top" constant="251" id="nWs-mR-DVw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ith-vC-j7E"/>
@@ -768,7 +778,6 @@
         <class className="ConfirmDateViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfirmDateViewController.h"/>
             <relationships>
-                <relationship kind="action" name="confirmButtonClicked:"/>
                 <relationship kind="outlet" name="dateImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="dateNameLabel" candidateClass="UILabel"/>
             </relationships>
@@ -835,11 +844,6 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelButtonClicked:"/>
-                <relationship kind="action" name="loginButtonClicked:"/>
-                <relationship kind="action" name="mapCloseButtonClicked:"/>
-                <relationship kind="action" name="menuButtonClicked:"/>
-                <relationship kind="action" name="setupButtonClicked:"/>
                 <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
