@@ -57,8 +57,10 @@
 {
     NSArray *myFbArray = [me objectForKey:@"data"];
     NSString *strUrl = [[myFbArray objectAtIndex:0] objectForKey:@"pic"];
+    NSString *myName = [[myFbArray objectAtIndex:0] objectForKey:@"name"];
     NSURL *nUrl = [NSURL URLWithString:strUrl];
     [self.myProfileImageView setImageWithURL:nUrl];
+    self.myNameLabel.text = myName;
 }
 
 @end

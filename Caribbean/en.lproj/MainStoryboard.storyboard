@@ -116,7 +116,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1E-yN-bNy">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-59-boK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_placeholder.gif" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-59-boK">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="DlN-wP-huE"/>
                                             <constraint firstAttribute="width" constant="100" id="MX9-oG-RiU"/>
@@ -135,16 +135,52 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSU-V1-mNY">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="DkZ-gr-YZZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5an-UR-Rqh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Tah-Q5-dIs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="My Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8a-5R-hou">
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="5an-UR-Rqh" firstAttribute="top" secondItem="UOM-59-boK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4rk-7a-ypG"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="leading" secondItem="lSU-V1-mNY" secondAttribute="leading" type="default" id="FbS-aW-UyH"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="trailing" secondItem="8ko-Cg-0I4" secondAttribute="trailing" type="default" id="JMj-ui-luf"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="top" secondItem="5an-UR-Rqh" secondAttribute="top" type="default" id="LUU-O4-MKd"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="trailing" secondItem="lSU-V1-mNY" secondAttribute="trailing" type="default" id="MxU-al-jJd"/>
+                                    <constraint firstItem="UOM-59-boK" firstAttribute="trailing" secondItem="5an-UR-Rqh" secondAttribute="trailing" type="default" id="QAk-dU-4O1"/>
                                     <constraint firstItem="gCx-C6-4sa" firstAttribute="leading" secondItem="d1E-yN-bNy" secondAttribute="leading" constant="36" id="Qo2-4I-5Ci"/>
+                                    <constraint firstItem="5an-UR-Rqh" firstAttribute="leading" secondItem="UOM-59-boK" secondAttribute="leading" type="default" id="S25-uP-zMh"/>
                                     <constraint firstItem="UOM-59-boK" firstAttribute="top" secondItem="d1E-yN-bNy" secondAttribute="top" constant="50" id="VfV-fv-AQX"/>
                                     <constraint firstItem="8ko-Cg-0I4" firstAttribute="top" secondItem="UOM-59-boK" secondAttribute="top" type="default" id="VkQ-TQ-aaJ"/>
                                     <constraint firstItem="gCx-C6-4sa" firstAttribute="top" secondItem="d1E-yN-bNy" secondAttribute="top" constant="13" id="ZJZ-3L-M33"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="bottom" secondItem="5an-UR-Rqh" secondAttribute="bottom" type="default" id="fFi-ly-B58"/>
                                     <constraint firstAttribute="trailing" secondItem="8ko-Cg-0I4" secondAttribute="trailing" constant="36" id="i6v-Vr-krM"/>
-                                    <constraint firstItem="8ko-Cg-0I4" firstAttribute="bottom" secondItem="UOM-59-boK" secondAttribute="bottom" type="default" id="uWa-w6-saE"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="leading" secondItem="8ko-Cg-0I4" secondAttribute="leading" type="default" id="p6m-LK-QyI"/>
+                                    <constraint firstAttribute="bottom" secondItem="lSU-V1-mNY" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="vc0-wy-IKX"/>
                                     <constraint firstItem="gCx-C6-4sa" firstAttribute="leading" secondItem="UOM-59-boK" secondAttribute="leading" type="default" id="wzj-g3-dGG"/>
+                                    <constraint firstItem="Y8a-5R-hou" firstAttribute="top" secondItem="8ko-Cg-0I4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y5Q-1L-53a"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -153,11 +189,12 @@
                             <constraint firstItem="d1E-yN-bNy" firstAttribute="trailing" secondItem="0W9-kz-HiI" secondAttribute="trailing" type="default" id="2HS-uq-UZ6"/>
                             <constraint firstItem="d1E-yN-bNy" firstAttribute="leading" secondItem="0W9-kz-HiI" secondAttribute="leading" type="default" id="6UE-gA-Fyl"/>
                             <constraint firstItem="d1E-yN-bNy" firstAttribute="top" secondItem="0W9-kz-HiI" secondAttribute="top" type="default" id="8Wi-3a-TmQ"/>
-                            <constraint firstAttribute="bottom" secondItem="d1E-yN-bNy" secondAttribute="bottom" constant="217" id="HTg-np-24m"/>
+                            <constraint firstAttribute="bottom" secondItem="d1E-yN-bNy" secondAttribute="bottom" constant="167" id="RZJ-pC-X7p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ith-vC-j7E"/>
                     <connections>
+                        <outlet property="myNameLabel" destination="5an-UR-Rqh" id="T4m-NZ-Z0i"/>
                         <outlet property="myProfileImageView" destination="UOM-59-boK" id="RB9-Mh-b3t"/>
                     </connections>
                 </viewController>
@@ -470,55 +507,6 @@
     <resources>
         <image name="profile_placeholder.gif" width="136" height="154"/>
     </resources>
-    <classes>
-        <class className="GameDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="inProgressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
-            </relationships>
-        </class>
-        <class className="MapViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SetupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TargetViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
