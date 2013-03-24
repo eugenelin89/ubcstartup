@@ -41,7 +41,7 @@
 ,\"desc2\":\"or an Irish Car Bomb.\"\
 ,\"desc3\":\"\"\
 ,\"headerImg\":\"http://24.media.tumblr.com/tumblr_m10cm7o9fx1rpv9aho1_400.jpg\"\
-,\"brandImg\":\"\"\
+,\"brandImg\":\"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/276846_149223025142311_185187191_q.jpg\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-02-28T00:00:00.000Z\"\
 ,\"points\":0\
@@ -53,7 +53,7 @@
 ,\"desc2\":\"\"\
 ,\"desc3\":\"\"\
 ,\"headerImg\":\"http://theboulevard.ca/topbar.jpg\"\
-,\"brandImg\":\"\"\
+,\"brandImg\":\"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/276911_24329337724_1959248491_q.jpg\"\
 ,\"startDateTime\":\"2013-03-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-04-30T00:00:00.000Z\"\
 ,\"points\":0\
