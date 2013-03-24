@@ -17,6 +17,7 @@
 #define DATA_KEY_TEAM_DESC @"TEAM_DESC"
 #define DATA_KEY_FB_FRIENDS @"FB_FRIENDS"
 #define DATA_KEY_TEAMS @"TEAMS"
+#define DATA_KEY_DATE @"DATE"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

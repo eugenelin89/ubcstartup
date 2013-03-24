@@ -15,13 +15,13 @@
 @interface SelectTeamViewController ()<MainControllerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIScrollViewDelegate, FbFriendCellDelegate>
 @property (strong, nonatomic) NSArray *friends; // All FB friends
 @property (strong, nonatomic) NSMutableArray *displayFriends;
-@property (weak, nonatomic) NSMutableDictionary *teamDic; // ref to dataCache -> createTeamDic -> teamDic
+
 
 @end
 
 @implementation SelectTeamViewController
 @synthesize friends = _friends;
-@synthesize teamDic = _teamDic;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,17 +46,6 @@
     // reference to the AppDelegate's data cache
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
-    // create a data cache for adding friends
-    NSMutableDictionary *createTeamDic = [appDelegate.dataCache objectForKey:DATA_KEY_CREATE_TEAM];
-    if(createTeamDic){
-        if(![createTeamDic objectForKey:DATA_KEY_TEAM_MEMBERS]){
-             [createTeamDic setObject:[[NSMutableDictionary alloc] init] forKey:DATA_KEY_TEAM_MEMBERS];
-        }
-        self.teamDic = [createTeamDic objectForKey:DATA_KEY_TEAM_MEMBERS];
-    }else{
-        // There is a bug!  What do we do?!
-    }
-    
     // populate friends and displayFriends array
     self.friends = [appDelegate.dataCache objectForKey: DATA_KEY_FB_FRIENDS];
 
@@ -71,11 +60,8 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [self.friendSearchTableView reloadData];
-    if(self.teamDic.count){
-        self.nextButtun.enabled = YES;
-    }else{
-        self.nextButtun.enabled = NO;
-    }
+    
+    self.nextButtun.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,7 +106,6 @@
     
     NSDictionary *friendDic = [self.displayFriends objectAtIndex:indexPath.row];
     cell.fbFriendDic = friendDic;
-    cell.teamDic = self.teamDic; // set ref to friendsDic so can add friend in the cell
     cell.delegate = self;
     [cell refreshCell];
     return cell;
@@ -133,6 +118,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //NSLog(@"Adding Friend.  DataCache: %@", appDelegate.dataCache);
+    
+    
     [self.friendSearchBar resignFirstResponder];
     FbFriendCell *selectedCell = (FbFriendCell *)[tableView cellForRowAtIndexPath:indexPath];
     [selectedCell addOrDeleteFriend];
@@ -164,11 +153,7 @@
 #pragma mark - FbFriendCellDelegate
 -(void)friendAddedOrRemoved
 {
-    if(self.teamDic.count){
-        self.nextButtun.enabled = YES;
-    }else{
-        self.nextButtun.enabled = NO;
-    }
+
 }
 
 @end

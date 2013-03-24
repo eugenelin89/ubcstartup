@@ -57,6 +57,9 @@
 -(void)addOrDeleteFriend
 {
     NSString *friendFbDic = [self.fbFriendDic objectForKey:@"id"];
+    
+    
+    
     if([self.teamDic objectForKey:friendFbDic]) // is this friend already in the team?
     {
         // 1. Remove Friend
