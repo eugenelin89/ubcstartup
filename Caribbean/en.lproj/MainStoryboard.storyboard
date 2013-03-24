@@ -77,7 +77,42 @@
                                 </connections>
                             </tableView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-zo-dts">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C13-yi-Lhm">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Login with Facebook">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="2" eventType="touchUpInside" id="2xo-Ou-16m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfP-CA-YpP">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonClicked:" destination="2" eventType="touchUpInside" id="1gY-lD-ccC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UfP-CA-YpP" firstAttribute="leading" secondItem="nhX-zo-dts" secondAttribute="leading" constant="79" id="02c-vA-kTG"/>
+                                    <constraint firstItem="C13-yi-Lhm" firstAttribute="top" secondItem="nhX-zo-dts" secondAttribute="top" constant="157" id="66B-ga-wng"/>
+                                    <constraint firstItem="UfP-CA-YpP" firstAttribute="leading" secondItem="C13-yi-Lhm" secondAttribute="leading" type="default" id="JX9-jA-pWj"/>
+                                    <constraint firstAttribute="bottom" secondItem="UfP-CA-YpP" secondAttribute="bottom" constant="157" id="OKZ-vk-H4a"/>
+                                    <constraint firstItem="UfP-CA-YpP" firstAttribute="trailing" secondItem="C13-yi-Lhm" secondAttribute="trailing" type="default" id="uc8-HX-zrP"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -106,6 +141,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fbLoginView" destination="nhX-zo-dts" id="JUX-NM-hYm"/>
+                        <outlet property="loginButton" destination="C13-yi-Lhm" id="QrS-iK-OuH"/>
                         <outlet property="tableView" destination="X2L-ND-IFE" id="qpr-t1-zOT"/>
                         <segue destination="ILz-Ck-ncd" kind="push" identifier="GameDetailSegue" id="G1S-FB-Ogs"/>
                     </connections>
@@ -622,6 +658,83 @@
     <resources>
         <image name="profile_placeholder.gif" width="136" height="154"/>
     </resources>
+    <classes>
+        <class className="FbFriendCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FbFriendCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="AddFriendLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="FriendImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="FriendNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="GameDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonClicked:"/>
+                <relationship kind="action" name="loginButtonClicked:"/>
+                <relationship kind="action" name="playGame:"/>
+                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="inProgressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="MapViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SelectTeamViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectTeamViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="friendSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="friendSearchTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="nextButtun" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="SetupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TargetViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonClicked:"/>
+                <relationship kind="action" name="loginButtonClicked:"/>
+                <relationship kind="action" name="mapCloseButtonClicked:"/>
+                <relationship kind="action" name="menuButtonClicked:"/>
+                <relationship kind="action" name="setupButtonClicked:"/>
+                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

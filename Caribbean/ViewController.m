@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSArray *targets; // array of dics for each target
 @property (strong, nonatomic) NSArray *annotations;
 @property (weak, nonatomic) IBOutlet UIView *fbLoginView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -42,6 +43,12 @@
      addObserver:self
      selector:@selector(significantLocationChanged)
      name:SignificantLocationChageNotification
+     object:nil];
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(sessionStateChanged:)
+     name:FBSessionStateChangedNotification
      object:nil];
     
     // create the map
@@ -252,7 +259,18 @@
 
 
 #pragma mark - IBActions
+- (IBAction)loginButtonClicked:(id)sender
+{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    // The user has initiated a login, so call the openSession method
+    // and show the login UX if necessary.
+    [appDelegate openSessionWithAllowLoginUI:YES];
+}
 
+- (IBAction)cancelButtonClicked:(id)sender
+{
+    [self hideFbLoginViewWithAnimateDuration:0.5 andDelay:0];
+}
 
 - (IBAction)setupButtonClicked:(id)sender
 {
@@ -269,7 +287,7 @@
         
         // Dropdown fbLoginView
         [self dropdownFbLoginView];
-        //self.loginButton.enabled = YES;
+        self.loginButton.enabled = YES;
     }
 }
 
@@ -359,6 +377,25 @@
         [self.fbLoginView setFrame:frame];
     } completion:^(BOOL finished) {
         
+    }];
+}
+
+- (void)sessionStateChanged:(NSNotification*)notification {
+    if (FBSession.activeSession.isOpen) {
+        [self loggedIn];
+    } else {
+        
+    }
+}
+
+-(void)loggedIn
+{
+    self.loginButton.enabled = NO;
+    [UIView animateWithDuration:0.5 delay:1.0 options:0 animations:^{
+        CGRect frame = self.view.frame;
+        frame.origin.y -= frame.size.height;
+        [self.fbLoginView setFrame: frame];
+    } completion:^(BOOL finished) {
     }];
 }
 
