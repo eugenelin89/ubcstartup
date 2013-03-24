@@ -45,6 +45,8 @@
 		10F22A4716FEE5F3000A509C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4616FEE5F3000A509C /* ImageIO.framework */; };
 		10F22A4916FEE9D9000A509C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F22A4816FEE9D9000A509C /* SDWebImage.framework */; };
 		10F22A4C16FEF800000A509C /* profile_placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 10F22A4B16FEF800000A509C /* profile_placeholder.gif */; };
+		10F22A5216FEFFE3000A509C /* FbFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A4F16FEFFE3000A509C /* FbFriendCell.m */; };
+		10F22A5316FEFFE3000A509C /* SelectTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F22A5116FEFFE3000A509C /* SelectTeamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,10 @@
 		10F22A4616FEE5F3000A509C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		10F22A4816FEE9D9000A509C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		10F22A4B16FEF800000A509C /* profile_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = profile_placeholder.gif; sourceTree = "<group>"; };
+		10F22A4E16FEFFE3000A509C /* FbFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FbFriendCell.h; sourceTree = "<group>"; };
+		10F22A4F16FEFFE3000A509C /* FbFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FbFriendCell.m; sourceTree = "<group>"; };
+		10F22A5016FEFFE3000A509C /* SelectTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTeamViewController.h; sourceTree = "<group>"; };
+		10F22A5116FEFFE3000A509C /* SelectTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTeamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +237,7 @@
 		10A0C4CA16AE047C00EAC683 /* SecondDate */ = {
 			isa = PBXGroup;
 			children = (
+				10F22A4D16FEFEE6000A509C /* View 5 - Select Date View */,
 				10F22A4A16FEF7E4000A509C /* Images */,
 				10F22A4116FEDAAF000A509C /* MainController.h */,
 				10F22A4216FEDAB0000A509C /* MainController.m */,
@@ -305,6 +312,17 @@
 			);
 			name = Images;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		10F22A4D16FEFEE6000A509C /* View 5 - Select Date View */ = {
+			isa = PBXGroup;
+			children = (
+				10F22A4E16FEFFE3000A509C /* FbFriendCell.h */,
+				10F22A4F16FEFFE3000A509C /* FbFriendCell.m */,
+				10F22A5016FEFFE3000A509C /* SelectTeamViewController.h */,
+				10F22A5116FEFFE3000A509C /* SelectTeamViewController.m */,
+			);
+			name = "View 5 - Select Date View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +412,8 @@
 				10F22A3916FECC8E000A509C /* WrapController.m in Sources */,
 				10F22A4016FED538000A509C /* SetupViewController.m in Sources */,
 				10F22A4316FEDAB0000A509C /* MainController.m in Sources */,
+				10F22A5216FEFFE3000A509C /* FbFriendCell.m in Sources */,
+				10F22A5316FEFFE3000A509C /* SelectTeamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -147,6 +147,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="hfn-FY-PIM" kind="push" id="UsZ-c8-2TK"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5an-UR-Rqh">
                                         <constraints>
@@ -201,6 +204,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gev-EL-Thh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="-647"/>
+        </scene>
+        <!--Select Team View Controller - Select Date-->
+        <scene sceneID="OTR-h9-vw4">
+            <objects>
+                <viewController id="hfn-FY-PIM" customClass="SelectTeamViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yq-Sz-BGd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L1O-5Z-940">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendCell" id="kjF-6A-iar" customClass="FbFriendCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-Jq-llY">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-Gx-55V">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="m4H-eF-hXT"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWX-lZ-AEn">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44" id="t6x-Rw-kUs"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-Xq-0qn">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="178" id="EJ2-RS-lVQ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ByC-Gx-55V" firstAttribute="leading" secondItem="VuY-Jq-llY" secondAttribute="leading" type="default" id="4s2-bG-yKE"/>
+                                                        <constraint firstItem="UWX-lZ-AEn" firstAttribute="centerY" secondItem="bM4-Xq-0qn" secondAttribute="centerY" type="default" id="9MO-op-DJT"/>
+                                                        <constraint firstItem="UWX-lZ-AEn" firstAttribute="top" secondItem="VuY-Jq-llY" secondAttribute="top" type="default" id="EUK-VK-9rj"/>
+                                                        <constraint firstItem="ByC-Gx-55V" firstAttribute="top" secondItem="VuY-Jq-llY" secondAttribute="top" type="default" id="FdR-iN-pgK"/>
+                                                        <constraint firstItem="ByC-Gx-55V" firstAttribute="bottom" secondItem="VuY-Jq-llY" secondAttribute="bottom" type="default" id="KC2-R9-tdA"/>
+                                                        <constraint firstItem="bM4-Xq-0qn" firstAttribute="leading" secondItem="ByC-Gx-55V" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Q7B-b4-RiI"/>
+                                                        <constraint firstItem="ByC-Gx-55V" firstAttribute="centerY" secondItem="bM4-Xq-0qn" secondAttribute="centerY" type="default" id="RFZ-lK-MAx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UWX-lZ-AEn" secondAttribute="trailing" constant="15" id="Rfv-fT-Tfs"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="VuY-Jq-llY" firstAttribute="leading" secondItem="kjF-6A-iar" secondAttribute="leading" type="default" id="D8Y-CA-aLC"/>
+                                            <constraint firstItem="VuY-Jq-llY" firstAttribute="centerY" secondItem="kjF-6A-iar" secondAttribute="centerY" type="default" id="LOh-Ii-oXZ"/>
+                                            <constraint firstItem="VuY-Jq-llY" firstAttribute="trailing" secondItem="kjF-6A-iar" secondAttribute="trailing" type="default" id="NA2-lo-C1t"/>
+                                            <constraint firstItem="VuY-Jq-llY" firstAttribute="top" secondItem="kjF-6A-iar" secondAttribute="top" type="default" id="kA3-5x-P9x"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="AddFriendLabel" destination="UWX-lZ-AEn" id="auv-yP-yUG"/>
+                                            <outlet property="FriendImageView" destination="ByC-Gx-55V" id="Nph-7e-5hd"/>
+                                            <outlet property="FriendNameLabel" destination="bM4-Xq-0qn" id="7JF-TP-i49"/>
+                                            <outlet property="containerView" destination="VuY-Jq-llY" id="deg-nz-Noy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hfn-FY-PIM" id="GcB-q7-VKk"/>
+                                    <outlet property="delegate" destination="hfn-FY-PIM" id="RUn-M7-Bok"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-EW-5rv">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QcI-EW-5rv" firstAttribute="top" secondItem="4yq-Sz-BGd" secondAttribute="top" type="default" id="2lR-9M-gkw"/>
+                            <constraint firstItem="L1O-5Z-940" firstAttribute="bottom" secondItem="4yq-Sz-BGd" secondAttribute="bottom" type="default" id="4aS-zW-Ycx"/>
+                            <constraint firstItem="L1O-5Z-940" firstAttribute="trailing" secondItem="4yq-Sz-BGd" secondAttribute="trailing" type="default" id="7Ir-JG-yle"/>
+                            <constraint firstItem="L1O-5Z-940" firstAttribute="leading" secondItem="4yq-Sz-BGd" secondAttribute="leading" type="default" id="mxn-lM-Gto"/>
+                            <constraint firstItem="QcI-EW-5rv" firstAttribute="trailing" secondItem="4yq-Sz-BGd" secondAttribute="trailing" type="default" id="o66-YU-ZkF"/>
+                            <constraint firstItem="QcI-EW-5rv" firstAttribute="leading" secondItem="4yq-Sz-BGd" secondAttribute="leading" type="default" id="oXR-hm-d5J"/>
+                            <constraint firstItem="L1O-5Z-940" firstAttribute="top" secondItem="QcI-EW-5rv" secondAttribute="bottom" type="default" id="roO-3g-FQd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Date" id="Ggm-Xf-ucA"/>
+                    <connections>
+                        <outlet property="friendSearchBar" destination="QcI-EW-5rv" id="LUe-AV-q2q"/>
+                        <outlet property="friendSearchTableView" destination="L1O-5Z-940" id="jMU-wW-DhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmJ-D9-7sI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-642"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="7ay-BI-7cP">
@@ -507,6 +611,74 @@
     <resources>
         <image name="profile_placeholder.gif" width="136" height="154"/>
     </resources>
+    <classes>
+        <class className="FbFriendCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FbFriendCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="AddFriendLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="FriendImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="FriendNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="GameDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="brandImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="businessNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentPlayersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="fbLoginView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="gameDescLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameDescLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameEndDateTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="inProgressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="pointsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="MapViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewCell.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SelectTeamViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectTeamViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="friendSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="friendSearchTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="nextButtun" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="SetupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetupViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myProfileImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TargetViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="targetTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButtonClicked:"/>
+                <relationship kind="outlet" name="closeMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
