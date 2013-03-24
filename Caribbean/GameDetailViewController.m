@@ -353,7 +353,7 @@ bool _blinkStatus = NO;
     }
     
     // Total Prize
-    NSNumber *totalPrize = [self.targetDic objectForKey:@"totalPrizes"];
+    NSNumber *totalPrize = [self.targetDic objectForKey:@"points"];
     self.totalPrizesLabel.text = [totalPrize stringValue];
     
     

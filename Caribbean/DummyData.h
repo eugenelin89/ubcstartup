@@ -20,7 +20,7 @@
 ,\"brandImg\":\"http://www.clickmyslice.ca/logo/fresh_slice_pizza_1.png\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-11-30T07:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 2, \"prize\":\"Free Pizza\", \"loc\":[49.283868, -123.111961]\
@@ -32,7 +32,7 @@
 ,\"brandImg\":\"https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-snc7/418949_342129042540148_1662995676_n.jpg\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":100\
+,\"points\":100\
 ,\"currentPlayers\":21\
 },\
 {\"id\": 3, \"prize\":\"50% Sandwich\", \"loc\":[49.273868, -123.111961]\
@@ -44,7 +44,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-02-28T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 4, \"prize\":\"Free Bubble Tea\", \"loc\":[49.283868, -123.121961]\
@@ -56,7 +56,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-03-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-04-30T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 5, \"prize\":\"Free Pop\", \"loc\":[49.273868, -123.126961]\
@@ -68,7 +68,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 6, \"prize\":\"Free Hotdog\", \"loc\":[49.278868, -123.101961]\
@@ -80,7 +80,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 7, \"prize\":\"Free Cheese Burger\", \"loc\":[49.216338, -122.971009]\
@@ -92,7 +92,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 8, \"prize\":\"Free Rice Noodle\", \"loc\":[49.206338, -122.981009]\
@@ -104,7 +104,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 9, \"prize\":\"$2 off Quizno's\", \"loc\":[49.216338, -122.991009]\
@@ -116,7 +116,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 10, \"prize\":\"Free Tacos\", \"loc\":[49.226338, -122.981009]\
@@ -128,7 +128,7 @@
 ,\"brandImg\":\"\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"totalPrizes\":0\
+,\"points\":0\
 ,\"currentPlayers\":0\
 },\
 ]}"
