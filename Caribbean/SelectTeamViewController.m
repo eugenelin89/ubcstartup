@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSArray *friends; // All FB friends
 @property (strong, nonatomic) NSMutableArray *displayFriends;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @end
 
@@ -155,7 +156,23 @@
 #pragma mark - FbFriendCellDelegate
 -(void)friendAddedOrRemoved
 {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    
+    
+    // populate friends and displayFriends array
+    NSDictionary *date = [appDelegate.dataCache objectForKey: DATA_KEY_DATE];
+    if(date){
+        self.nextButton.enabled = YES;
+    }else{
+        self.nextButton.enabled = NO;
+    }
 
+}
+
+- (IBAction)nextButtonClicked:(id)sender
+{
+    [self performSegueWithIdentifier:@"CONFIRM_SEGUE" sender:self];
 }
 
 @end

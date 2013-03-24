@@ -344,15 +344,38 @@
                             <constraint firstItem="L1O-5Z-940" firstAttribute="top" secondItem="QcI-EW-5rv" secondAttribute="bottom" type="default" id="roO-3g-FQd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Date" id="Ggm-Xf-ucA"/>
+                    <navigationItem key="navigationItem" title="Select Date" id="Ggm-Xf-ucA">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="o5D-0d-JSF">
+                            <connections>
+                                <action selector="nextButtonClicked:" destination="hfn-FY-PIM" id="3YN-hJ-gYz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="friendSearchBar" destination="QcI-EW-5rv" id="LUe-AV-q2q"/>
                         <outlet property="friendSearchTableView" destination="L1O-5Z-940" id="jMU-wW-DhH"/>
+                        <outlet property="nextButton" destination="o5D-0d-JSF" id="BhN-12-DGr"/>
+                        <segue destination="mpy-LR-33Z" kind="push" identifier="CONFIRM_SEGUE" id="d2u-nO-Xnk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmJ-D9-7sI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1687" y="-642"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FVk-Ji-aLo">
+            <objects>
+                <viewController id="mpy-LR-33Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h5S-B9-wHo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ST4-BN-KHH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo4-WH-ZbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2163" y="-642"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="7ay-BI-7cP">
@@ -688,6 +711,7 @@
             <relationships>
                 <relationship kind="outlet" name="friendSearchBar" candidateClass="UISearchBar"/>
                 <relationship kind="outlet" name="friendSearchTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="nextButtun" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>

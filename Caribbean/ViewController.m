@@ -275,7 +275,7 @@
 - (IBAction)setupButtonClicked:(id)sender
 {
     if(FBSession.activeSession.state == FBSessionStateOpen){
-        // we are logged in.  Do nothing.
+        [self performSegueWithIdentifier:@"SETUP_SEGUE" sender:self];
     }
     else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"playGame!  FBSessionStateCreatedTokenLoaded");
