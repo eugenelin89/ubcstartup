@@ -353,8 +353,8 @@ bool _blinkStatus = NO;
     }
     
     // Total Prize
-    NSNumber *totalPrize = [self.targetDic objectForKey:@"points"];
-    self.pointsLabel.text = [totalPrize stringValue];
+    NSNumber *points = [self.targetDic objectForKey:@"points"];
+    self.pointsLabel.text = [points stringValue];
     
     
     // Total Players
