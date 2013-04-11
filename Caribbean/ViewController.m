@@ -25,6 +25,9 @@
 @property (strong, nonatomic) NSArray *annotations;
 @property (weak, nonatomic) IBOutlet UIView *fbLoginView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *setupButton;
+
+@property (strong, nonatomic) UIBarButtonItem *setupButtonRef;
 
 @end
 
@@ -336,6 +339,7 @@
         mapFrame = [self.view bounds];
         
         // Add the close button
+        self.setupButtonRef = self.setupButton;
         UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(closeMap)];
         self.navigationItem.rightBarButtonItem = button;
         
@@ -343,7 +347,8 @@
     }else{
         mapFrame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, MAP_CELL_HEIGHT);
         // Remove close button
-        self.navigationItem.rightBarButtonItem = nil;
+        //self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.rightBarButtonItem = self.setupButtonRef;
     }
     [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
         

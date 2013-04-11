@@ -44,7 +44,7 @@
 ,\"brandImg\":\"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/276846_149223025142311_185187191_q.jpg\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-02-28T00:00:00.000Z\"\
-,\"points\":0\
+,\"points\":250\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 4, \"title\":\"Canadian Americano\", \"loc\":[49.263711,-123.227663]\
@@ -56,19 +56,19 @@
 ,\"brandImg\":\"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/276911_24329337724_1959248491_q.jpg\"\
 ,\"startDateTime\":\"2013-03-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-04-30T00:00:00.000Z\"\
-,\"points\":0\
+,\"points\":200\
 ,\"currentPlayers\":0\
 },\
 {\"id\": 5, \"title\":\"Bike Trip\", \"loc\":[49.313246, -123.140648]\
 ,\"name\":\"From Under the Bridge\"\
 ,\"desc1\":\"Take a bike trip along Stanley Park Seawall\"\
-,\"desc2\":\"Pose a picture a picture of the Lions Gate from below the bridge!\"\
+,\"desc2\":\"Pose a picture of the Lions Gate from below the bridge!\"\
 ,\"desc3\":\"\"\
 ,\"headerImg\":\"http://knittingthecamino.files.wordpress.com/2009/03/lions-gate.jpg?w=300&h=225\"\
 ,\"brandImg\":\"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/592195_144709825699098_758911221_q.jpg\"\
 ,\"startDateTime\":\"2013-02-24T00:00:00.000Z\"\
 ,\"endDateTime\":\"2013-03-31T00:00:00.000Z\"\
-,\"points\":0\
+,\"points\":1000\
 ,\"currentPlayers\":0\
 },\
 ]}"
